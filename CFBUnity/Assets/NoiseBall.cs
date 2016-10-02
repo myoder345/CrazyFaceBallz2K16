@@ -1,0 +1,67 @@
+﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+public class NoiseBall : MonoBehaviour {
+	[SerializeField]private float m_repulsiveForce;
+	[SerializeField]private float m_ballMultiplier = 100.0f;
+	[SerializeField]private LineRenderer m_lineRenderer;
+	[SerializeField]private LineRenderer m_playerLineRenderer;
+	[SerializeField]private Rigidbody m_rigidbody;
+	[SerializeField]private LayerMask m_playerLayerMask;
+	[SerializeField]private LayerMask m_layerMask;
+	[SerializeField]private float m_playerModifier;
+
+	private const float mc_playerSearchDistance = 1000.0f;
+	// Use this for initialization
+	void Start () {
+		StartCoroutine (RepellBalls());
+	}
+
+	private IEnumerator RepellBalls(){
+		Vector3 origPosition = this.transform.position;
+		GameObject [] NoisyBalls = GameObject.FindGameObjectsWithTag ("NoiseBall");
+
+		while (true) {
+			Collider[] hits = Physics.OverlapSphere (this.transform.position, mc_playerSearchDistance,m_playerLayerMask);
+
+			List<Vector3> positions = new List<Vector3>();
+			//foreach hit, render a line
+			foreach (Collider hit in hits) {
+				positions.Add (this.transform.position);
+				positions.Add (hit.transform.position);
+
+				Vector3 direction = this.transform.position - hit.transform.position;
+				m_rigidbody.AddForce(direction * m_repulsiveForce * Time.deltaTime * -1.0f);
+			}
+			m_lineRenderer.SetVertexCount (positions.Count);
+			m_lineRenderer.SetPositions (positions.ToArray ());
+
+
+			foreach (GameObject ball in NoisyBalls) {
+				//calculate distance vector
+				Vector3 direction = this.transform.position - ball.transform.position;
+
+				//add a force proportional to that distance to the ball
+				m_rigidbody.AddForce(direction * m_repulsiveForce * m_ballMultiplier * Time.deltaTime);
+			}
+
+			hits = Physics.OverlapSphere (this.transform.position, mc_playerSearchDistance,m_layerMask);
+			positions = new List<Vector3>();
+			foreach (Collider hit in hits) {
+				positions.Add (this.transform.position);
+				positions.Add (hit.transform.position);
+
+				Vector3 direction = this.transform.position - hit.transform.position;
+				m_rigidbody.AddForce(direction * m_repulsiveForce * m_playerModifier * Time.deltaTime / (Vector3.Distance(this.transform.position,hit.transform.position)));
+			}
+
+			m_playerLineRenderer.SetVertexCount (positions.Count);
+			m_playerLineRenderer.SetPositions (positions.ToArray());
+
+			m_rigidbody.AddForce ((origPosition - this.transform.position) * Vector3.Distance(origPosition,this.transform.position) * m_ballMultiplier * Time.deltaTime);
+
+			yield return new WaitForEndOfFrame ();
+		}
+	}
+}

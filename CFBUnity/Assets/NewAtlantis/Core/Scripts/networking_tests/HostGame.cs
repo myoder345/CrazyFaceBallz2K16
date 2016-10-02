@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if false
+using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.Networking.Types;
 using UnityEngine.Networking.Match;
@@ -118,3 +119,4 @@ public class HostGame : MonoBehaviour
 		Debug.Log("Connected!");
 	}
 }
+#endif
