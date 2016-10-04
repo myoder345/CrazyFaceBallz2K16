@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{63849B7A-283B-542F-357F-6BDF0B094534}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+    <UnityVersion>5.4.0f3</UnityVersion>
+    <RootNamespace></RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_4_0;UNITY_5_4;UNITY_5;UNITY_ANALYTICS;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_EDITOR_RETINA;ENABLE_RETINA_GUISTYLES;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_VSTU;CROSS_PLATFORM_INPUT</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_4_0;UNITY_5_4;UNITY_5;UNITY_ANALYTICS;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_EDITOR_RETINA;ENABLE_RETINA_GUISTYLES;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_VSTU;CROSS_PLATFORM_INPUT</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="CFBUnity.CSharp.Plugins.csproj">
+      <Project>{B76C1C85-CC0E-FC65-A45A-BBF8B15BF890}</Project>
+      <Name>CFBUnity.CSharp.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\NewAtlantis\Camera_Mover_Package\NA_CameraRandomRotateAround.cs" />
+    <Compile Include="Assets\NewAtlantis\Camera_Mover_Package\NA_CameraRandomRotateAroundCam.cs" />
+    <Compile Include="Assets\NewAtlantis\Camera_Mover_Package\NA_CameraRandomView.cs" />
+    <Compile Include="Assets\NewAtlantis\Camera_Mover_Package\NA_CameraRotateAround.cs" />
+    <Compile Include="Assets\NewAtlantis\Camera_Mover_Package\NA_CameraRotateWithKeyboard.cs" />
+    <Compile Include="Assets\NewAtlantis\Camera_Mover_Package\NA_CameraView.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Audio\CodecIMAADPCM.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Audio\IMAADPCM.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Cameras\NACamera.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Cameras\NACameraFirstPerson.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Cameras\NACameraThirdPerson.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Cameras\NACameraThirdPersonWithTracking.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\AI\NAAnimalBehavior.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Animation\NAFloat.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Animation\NAFollow.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Animation\NAMoveOnCollide.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Animation\NAMoveOnTrigger.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Animation\NAPlayAnimationOnCollide.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Animation\NAPlayAnimationOnTrigger.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Animation\NARestoreTransform.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Animation\NARotate.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Animation\NARotateAround.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Animation\NARotateAroundObject.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Animation\NARotateOnCollide.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Animation\NARotateOnTrigger.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Animation\NASyncAnimationWithAudio.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Animation\NATeleportOnCollide.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Animation\NATeleportOnTrigger.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NAAudioWaveTerrain.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NADirectionalAudioSource.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NALooperSequence.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NAModulatePanning.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NAModulateVolume.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NAPhysicsAudioSource.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NAPlay.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NAPlayAtRandomInterval.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NAPlayOnAvatarClose.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NAPlayOnButtonPressed.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NAPlayOnCollide.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NAPlayOnCollideSimple.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NAPlayOnKeyPressed.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NAPlayOnTouch.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NAPlayOnTrigger.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NARandomizeAudioSource.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NATogglePlayOnCollide.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NAToggleVolumeOnTrigger.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NATurnOffSound.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Audio\NAUnmuteOnCollide.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\AudioSynthesis\NAAudioEnvelopeADSR.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\AudioSynthesis\NAAudioSynthConvolutionLooper.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\AudioSynthesis\NAAudioSynthFM.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\AudioSynthesis\NAAudioSynthGranulate.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\AudioSynthesis\NAAudioSynthHelper.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\AudioSynthesis\NAAudioSynthLooper.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\AudioSynthesis\NAAudioSynthNoise.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\AudioSynthesis\NAAudioSynthOscillator.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\AudioSynthesis\NAAudioSynthSubstractive.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Core\NASpaceTeleportOnTrigger.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\GUI\NAObjectLabel.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\NA.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\NAAudioAmplitudeProcessing.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\NAAudioRecorder.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\NAAudioSource.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\NAAudioStream.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\NAColorRandomChanger.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\NAFlareFadeOut.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\NALogic.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\NALookAtClosestAvatar.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\NAObjectBehaviour.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\NAOcclusionFX.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\NAReflectionsFX.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\NARemoteAudioSource.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\NAReverbEffector.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\NAReverbResonator.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\NAViewerOptim.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\NA_Stretch.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Particles\NAParticleOnCollide.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Particles\NAParticleOnTrigger.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Physics\NABounceOnCollide.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Physics\NAGravityChanger.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Physics\NATimeChanger.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Physics\NAWind.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\Rendering\NASkyBox.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\SphereDistribution.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Components\StreamGUI.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Helps\HelpAmplifier.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Main\ABLoader.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Main\App.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Main\Asset.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Main\ChatManager.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Main\EarHelp.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Main\FlyCamera.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Main\LogManager.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Main\NAAvatar.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Main\NADownloader.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Main\NAInput.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Main\NANetwork.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Main\NAObject.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Main\NAServer.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Main\NATutorial.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Main\NetworkSync.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Main\ObjectUploader.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Main\Settings.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Main\Space.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Main\SpaceObject.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Misc\AssetBundlePreviewGenerator.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Misc\AssetBundleTest.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Misc\AudioWidget.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Misc\DSP.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Misc\MouseLook.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Misc\TransitionManager.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Misc\WaterSurface.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Objects\NAObjectBase.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Rotate.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Scale.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Tools\NAToolAudioPlayer.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Tools\NAToolBase.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Tools\NAToolBuilder.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Tools\NAToolChronometer.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Tools\NAToolCloner.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Tools\NAToolDestroy.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Tools\NAToolFlag.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Tools\NAToolGPS.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Tools\NAToolHit.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Tools\NAToolHonk.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Tools\NAToolLight.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Tools\NAToolPhysicsInteraction.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Tools\NAToolScreenshot.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Tools\NAToolSonar.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Tools\NAToolSonometer.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Tools\NAToolSparkle.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Tools\NAToolSpawner.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\Tools\NAToolTeleporter.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\audiohf.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\networking_tests\ExampleUnityNetworkingBrowseServers.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\networking_tests\HostGame.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\networking_tests\MasterServerTest.cs" />
+    <Compile Include="Assets\NewAtlantis\Core\Scripts\test\player_test.cs" />
+    <Compile Include="Assets\NewAtlantis\EditableAvatarPackage\NA_AvatarEditor.cs" />
+    <Compile Include="Assets\NewAtlantis\EditableAvatarPackage\Scripts\DesignAvatar.cs" />
+    <Compile Include="Assets\NewAtlantis\EditableAvatarPackage\Scripts\RotateOnRightClick.cs" />
+    <Compile Include="Assets\NewAtlantis\EditableAvatarPackage\Scripts\WriteFile.cs" />
+    <Compile Include="Assets\NewAtlantis\TRS Gyzmo\Prefabs\SetCameraDepth.cs" />
+    <Compile Include="Assets\NewAtlantis\TRS Gyzmo\Scripts\Camera\RotateCamera.cs" />
+    <Compile Include="Assets\NewAtlantis\TRS Gyzmo\Scripts\Camera\ScaleCamera.cs" />
+    <Compile Include="Assets\NewAtlantis\TRS Gyzmo\Scripts\Gyzmo Entities\ChangeMaterialOnMouseOver.cs" />
+    <Compile Include="Assets\NewAtlantis\TRS Gyzmo\Scripts\Gyzmo Entities\GetDimensionType.cs" />
+    <Compile Include="Assets\NewAtlantis\TRS Gyzmo\Scripts\Gyzmo Entities\GetMode.cs" />
+    <Compile Include="Assets\NewAtlantis\TRS Gyzmo\Scripts\Gyzmo Entities\NormalizeScaling.cs" />
+    <Compile Include="Assets\NewAtlantis\TRS Gyzmo\Scripts\Gyzmo\GyzmoTransformScript.cs" />
+    <Compile Include="Assets\NewAtlantis\TRS Gyzmo\Scripts\Gyzmo\LinkGyzmoPositionToPointPosition.cs" />
+    <Compile Include="Assets\NewAtlantis\TRS Gyzmo\Scripts\Selection\SelectorScript.cs" />
+    <Compile Include="Assets\NewAtlantis\TRS Gyzmo\Scripts\TRS_Gizmo.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\ben_scripts\FlockManager.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\ben_scripts\MyUtils.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\ben_scripts\SteeringBehavior.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\ben_scripts\SteeringVehicle.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\daan_theo_scripts\CreatureBehaviour.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\daan_theo_scripts\CreatureSpawner.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\daan_theo_scripts\CreatureTail.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\daan_theo_scripts\Gain.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\daan_theo_scripts\NAAccelerometer.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\daan_theo_scripts\NAFlubberMesh.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\daan_theo_scripts\NALookAtCamera.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\daan_theo_scripts\NAMeshDistorsion.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\daan_theo_scripts\NANoiseLowPass.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\daan_theo_scripts\NAaudio_volume_scaler.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\daan_theo_scripts\NAnoise.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\daan_theo_scripts\Sinus.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\jonathan_scripts\jumpy.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\jonathan_scripts\testaudiosources.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\mathilde_scripts\Ball.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\mathilde_scripts\Bricks.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\mathilde_scripts\CuvetteLeft.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\mathilde_scripts\CuvetteRight.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\mathilde_scripts\DeadZone.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\mathilde_scripts\GM.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\mathilde_scripts\Paddle.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\nico_marlon_gaet_scripts\FaireAvancerLaBalle.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\nico_marlon_gaet_scripts\Freiner.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\oscar_scripts\EffectBoxEcho.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\oscar_scripts\EffectBoxLowPass.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\oscar_scripts\EffectBoxReverb.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\peter_scripts\SoundOndCollide.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\peter_scripts\cameracontroller.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\peter_scripts\playercontroller.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\peter_scripts\rotator.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\peter_scripts\terrainTilt.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\peter_scripts\trigReverb.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\pg_scripts\Niebelung.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\pg_scripts\Notung.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\pg_scripts\PlaySound1.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\pg_scripts\Siegfried.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\pg_scripts\Worldturns.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\pg_scripts\brunhilde.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\pg_scripts\donner.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\pg_scripts\fatemoon.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\pg_scripts\froh_world.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\pg_scripts\magcap.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\pg_scripts\magcub.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\pg_scripts\moon1.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\pg_scripts\rheingold.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\pg_scripts\sm_moon.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\roland_scripts\BandPassFilter.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\roland_scripts\MaCollisionVelocity.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\roland_scripts\NAColliderPlaySound.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\roland_scripts\NAElipseMover.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\roland_scripts\NARandomMover.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\roland_scripts\NASampler.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\roland_scripts\NATranformSound.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\roland_scripts\NAbasic_granular.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\roland_scripts\Noise.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\roland_scripts\ObjectRandomStartupParams.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\roland_scripts\ParticleSoundTrigger.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\roland_scripts\RandomMover3D.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\roland_scripts\RandomMover3D_03.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\roland_scripts\SinGen.cs" />
+    <Compile Include="Assets\NewAtlantis\Users\Scripts\roland_scripts\WallBuilder04.cs" />
+    <Compile Include="Assets\NoiseBall.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\Custom\A.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\Custom\A_Color.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\Custom\A_ColorSimple 1.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\Custom\A_ColorSimpleBlend.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\Custom\Blending.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\Custom\CelShading.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\Custom\LightRim.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\Custom\ReflectiveTransparent.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\Custom\TransparentSpecular.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\AutoLight.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\HLSLSupport.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\Lighting.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\SpeedTreeBillboardCommon.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\SpeedTreeCommon.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\SpeedTreeVertex.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\SpeedTreeWind.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\TerrainEngine.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\TerrainSplatmapCommon.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\Tessellation.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityBuiltin2xTreeLibrary.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityBuiltin3xTreeLibrary.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityCG.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityDeferredLibrary.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityGlobalIllumination.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityLightingCommon.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityMetaPass.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityPBSLighting.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityShaderVariables.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityShadowLibrary.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityStandardBRDF.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityStandardConfig.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityStandardCore.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityStandardCoreForward.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityStandardCoreForwardSimple.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityStandardInput.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityStandardMeta.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityStandardShadow.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityStandardUtils.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityUI.cginc" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\Camera-DepthNormalTexture.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\Font.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\Internal-BlitCopy.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\Internal-Clear.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\Internal-Colored.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\Internal-CombineDepthNormals.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\Internal-ErrorShader.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\Internal-Flare.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\Internal-GUITexture.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\Internal-GUITextureBlit.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\Internal-GUITextureClip.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\Internal-GUITextureClipText.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\Internal-Halo.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\Internal-PrePassCollectShadows.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\Internal-SplashShadowBlur.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\Internal-SplashShadowCaster.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\Internal-SplashShadowReceiver.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\Internal-SplashShadowReceiverSimple.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\PerformanceTools\FrameDebuggerRenderTargetDisplay.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResources\Sprites-Default.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Alpha-BumpSpec.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Alpha-Bumped.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Alpha-Diffuse.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Alpha-Glossy.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Alpha-Parallax.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Alpha-ParallaxSpec.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Alpha-VertexLit.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\AlphaTest-BumpSpec.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\AlphaTest-Bumped.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\AlphaTest-Diffuse.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\AlphaTest-Glossy.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\AlphaTest-SoftEdgeUnlit.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\AlphaTest-VertexLit.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Cubemaps\CubeBlend.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Cubemaps\CubeBlur.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Cubemaps\CubeBlurOdd.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Cubemaps\CubeCopy.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Decal.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Flare.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\GIDebug\TextureUV.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\GIDebug\UV1sAsPositions.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\GIDebug\VertexColors.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Illumin-BumpSpec.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Illumin-Bumped.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Illumin-Diffuse.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Illumin-Glossy.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Illumin-Parallax.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Illumin-ParallaxSpec.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Illumin-VertexLit.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Internal-DeferredReflections.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Internal-DeferredShading.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Internal-PrePassLighting.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Lightmap-BumpSpec.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Lightmap-Bumped.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Lightmap-Diffuse.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Lightmap-Glossy.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Lightmap-VertexLit.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Mobile\Mobile-BumpSpec-1DirectionalLight.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Mobile\Mobile-BumpSpec.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Mobile\Mobile-Bumped.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Mobile\Mobile-Diffuse.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Mobile\Mobile-Lightmap-Unlit.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Mobile\Mobile-Particle-Add.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Mobile\Mobile-Particle-Alpha-VertexLit.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Mobile\Mobile-Particle-Alpha.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Mobile\Mobile-Particle-Multiply.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Mobile\Mobile-Skybox.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Mobile\Mobile-VertexLit-OnlyDirectionalLights.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Mobile\Mobile-VertexLit.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Nature\SoftOcclusion\TreeSoftOcclusionBark.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Nature\SoftOcclusion\TreeSoftOcclusionBarkRendertex.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Nature\SoftOcclusion\TreeSoftOcclusionLeaves.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Nature\SoftOcclusion\TreeSoftOcclusionLeavesRendertex.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Nature\SpeedTree.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Nature\SpeedTreeBillboard.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorBark.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorBarkOptimized.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorBarkRendertex.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorLeaves.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorLeavesFast.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorLeavesFastOptimized.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorLeavesOptimized.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorLeavesRendertex.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Normal-BumpSpec.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Normal-Bumped.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Normal-Diffuse.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Normal-DiffuseDetail.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Normal-DiffuseFast.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Normal-Glossy.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Normal-Parallax.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Normal-ParallaxSpec.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Normal-VertexLit.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Particle Add.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Particle AddMultiply.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Particle AddSmooth.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Particle Alpha Blend.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Particle Blend.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Particle Multiply.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Particle MultiplyDouble.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Particle Premultiply Blend.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Particle VertexLit Blended.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Reflect-BumpNolight.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Reflect-BumpSpec.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Reflect-BumpVertexLit.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Reflect-Bumped.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Reflect-Diffuse.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Reflect-Glossy.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Reflect-Parallax.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Reflect-ParallaxSpec.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Reflect-VertexLit.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Skybox-Cubed.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Skybox-Procedural.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Skybox.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Sprites-Diffuse.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Standard.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\StandardSpecular.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\TerrainShaders\Details\VertexLit.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\TerrainShaders\Details\WavingGrass.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\TerrainShaders\Details\WavingGrassBillboard.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\TerrainShaders\Splats\AddPass.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\TerrainShaders\Splats\FirstPass.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\TerrainShaders\Splats\Specular-AddPass.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\TerrainShaders\Splats\Specular-Base.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\TerrainShaders\Splats\Specular-FirstPass.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\TerrainShaders\Splats\Standard-AddPass.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\TerrainShaders\Splats\Standard-Base.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\TerrainShaders\Splats\Standard-FirstPass.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\TerrainShaders\Trees\BillboardTree.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\UI\UI-Default.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\UI\UI-DefaultFont.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\UI\UI-Lit-Bumped.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\UI\UI-Lit-Detail.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\UI\UI-Lit-Refraction.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\UI\UI-Lit-RefractionDetail.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\UI\UI-Lit-Transparent.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\UI\UI-Unlit-Detail.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\UI\UI-Unlit-Text.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\UI\UI-Unlit-TextDetail.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\UI\UI-Unlit-Transparent.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Unlit\Unlit-Alpha.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Unlit\Unlit-AlphaTest.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Unlit\Unlit-Color.shader" />
+    <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Unlit\Unlit-Normal.shader" />
+    <None Include="Assets\NewAtlantis\Core\Shaders\ReflectiveTransparent.shader" />
+    <None Include="Assets\NewAtlantis\Core\Shaders\TransparentSpecular.shader" />
+    <None Include="Assets\NewAtlantis\Core\Text\tutorial.txt" />
+    <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
+</Project>

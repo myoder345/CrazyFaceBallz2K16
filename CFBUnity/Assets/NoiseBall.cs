@@ -12,7 +12,7 @@ public class NoiseBall : MonoBehaviour {
 	[SerializeField]private LayerMask m_layerMask;
 	[SerializeField]private float m_playerModifier;
 
-	private const float mc_playerSearchDistance = 1000.0f;
+	private const float mc_searchDistance = 15.0f;
 	// Use this for initialization
 	void Start () {
 		StartCoroutine (RepellBalls());
@@ -23,7 +23,7 @@ public class NoiseBall : MonoBehaviour {
 		GameObject [] NoisyBalls = GameObject.FindGameObjectsWithTag ("NoiseBall");
 
 		while (true) {
-			Collider[] hits = Physics.OverlapSphere (this.transform.position, mc_playerSearchDistance,m_playerLayerMask);
+			Collider[] hits = Physics.OverlapSphere (this.transform.position, mc_searchDistance,m_playerLayerMask);
 
 			List<Vector3> positions = new List<Vector3>();
 			//foreach hit, render a line
@@ -32,7 +32,9 @@ public class NoiseBall : MonoBehaviour {
 				positions.Add (hit.transform.position);
 
 				Vector3 direction = this.transform.position - hit.transform.position;
-				m_rigidbody.AddForce(direction * m_repulsiveForce * Time.deltaTime * -1.0f);
+
+                float distance = Vector3.Distance(this.transform.position, hit.transform.position) + .1f;
+				m_rigidbody.AddForce(direction.normalized * m_repulsiveForce * Time.deltaTime * -1.0f/distance);
 			}
 			m_lineRenderer.SetVertexCount (positions.Count);
 			m_lineRenderer.SetPositions (positions.ToArray ());
@@ -42,17 +44,19 @@ public class NoiseBall : MonoBehaviour {
 				//calculate distance vector
 				Vector3 direction = this.transform.position - ball.transform.position;
 
-				//add a force proportional to that distance to the ball
-				m_rigidbody.AddForce(direction * m_repulsiveForce * m_ballMultiplier * Time.deltaTime);
+                //add a force proportional to that distance to the ball
+                float distance = Vector3.Distance(this.transform.position, ball.transform.position) + .1f;
+                m_rigidbody.AddForce(direction * m_repulsiveForce * m_ballMultiplier * Time.deltaTime/distance);
 			}
 
-			hits = Physics.OverlapSphere (this.transform.position, mc_playerSearchDistance,m_layerMask);
+			hits = Physics.OverlapSphere (this.transform.position, mc_searchDistance,m_layerMask);
 			positions = new List<Vector3>();
 			foreach (Collider hit in hits) {
 				positions.Add (this.transform.position);
 				positions.Add (hit.transform.position);
+               
 
-				Vector3 direction = this.transform.position - hit.transform.position;
+                Vector3 direction = this.transform.position - hit.transform.position;
 				m_rigidbody.AddForce(direction * m_repulsiveForce * m_playerModifier * Time.deltaTime / (Vector3.Distance(this.transform.position,hit.transform.position)));
 			}
 

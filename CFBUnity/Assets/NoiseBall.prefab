@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010793333044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.27, y: -1.07, z: 3.84}
+  m_LocalPosition: {x: -35.16, y: -1.07, z: 6.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 057c33ee44f41774e83d0d6e25ce8356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_repulsiveForce: 10
+  m_repulsiveForce: 1
   m_ballMultiplier: 4
   m_lineRenderer: {fileID: 120000011279445652}
   m_playerLineRenderer: {fileID: 120000011986605500}
@@ -147,7 +147,7 @@ MonoBehaviour:
     m_Bits: 1536
   m_layerMask:
     serializedVersion: 2
-    m_Bits: 4294965759
+    m_Bits: 4294963711
   m_playerModifier: 100
 --- !u!120 &120000011279445652
 LineRenderer:

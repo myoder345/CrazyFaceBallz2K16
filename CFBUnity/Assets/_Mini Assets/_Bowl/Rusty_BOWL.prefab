@@ -10,7 +10,8 @@ GameObject:
   - 4: {fileID: 483210}
   - 33: {fileID: 3308050}
   - 23: {fileID: 2319706}
-  m_Layer: 0
+  - 64: {fileID: 64000010413947912}
+  m_Layer: 11
   m_Name: Rusty_BOWL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,8 +25,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159934}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -10.715813, y: 0, z: -0.0343155}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -33.892597, y: -5.09, z: 7.770412}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,3 +78,15 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 159934}
   m_IsPrefabParent: 1
+--- !u!64 &64000010413947912
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159934}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 01458cb47eb4d9e4ab0c1cede58a6e20, type: 3}
