@@ -12,6 +12,7 @@ public class NoiseBall : MonoBehaviour {
 	[SerializeField]private LayerMask m_layerMask;
 	[SerializeField]private float m_playerModifier;
 
+
 	private const float mc_searchDistance = 15.0f;
 	// Use this for initialization
 	void Start () {
@@ -19,6 +20,7 @@ public class NoiseBall : MonoBehaviour {
 	}
 
 	private IEnumerator RepellBalls(){
+        m_rigidbody.AddTorque(new Vector3(Random.Range(-1000.0f, 1000.0f), Random.Range(-1000.0f, 1000.0f), Random.Range(-1000.0f, 1000.0f)));
 		Vector3 origPosition = this.transform.position;
 		GameObject [] NoisyBalls = GameObject.FindGameObjectsWithTag ("NoiseBall");
 
@@ -26,20 +28,27 @@ public class NoiseBall : MonoBehaviour {
 			Collider[] hits = Physics.OverlapSphere (this.transform.position, mc_searchDistance,m_playerLayerMask);
 
 			List<Vector3> positions = new List<Vector3>();
+
+            float averageDistance = 0.0f;
 			//foreach hit, render a line
 			foreach (Collider hit in hits) {
 				positions.Add (this.transform.position);
 				positions.Add (hit.transform.position);
 
-				Vector3 direction = this.transform.position - hit.transform.position;
+                Vector3 direction = this.transform.position - hit.transform.position;
 
                 float distance = Vector3.Distance(this.transform.position, hit.transform.position) + .1f;
+                averageDistance += distance;
+
 				m_rigidbody.AddForce(direction.normalized * m_repulsiveForce * Time.deltaTime * -1.0f/distance);
 			}
+
+            averageDistance = Mathf.Min(1.0f,averageDistance / (positions.Count * 10.0f));
             if (m_lineRenderer != null)
             {
                 m_lineRenderer.SetVertexCount(positions.Count);
                 m_lineRenderer.SetPositions(positions.ToArray());
+                m_lineRenderer.SetWidth(1/(averageDistance*2.0f), 1/averageDistance);
             }
 
 			foreach (GameObject ball in NoisyBalls) {
