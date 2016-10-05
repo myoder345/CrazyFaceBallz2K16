@@ -11,12 +11,21 @@ public class NoiseBall : MonoBehaviour {
 	[SerializeField]private LayerMask m_playerLayerMask;
 	[SerializeField]private LayerMask m_layerMask;
 	[SerializeField]private float m_playerModifier;
-
+    [SerializeField]private AudioReverbZone m_audioReverbZone;
 
 	private const float mc_searchDistance = 15.0f;
 	// Use this for initialization
 	void Start () {
-		StartCoroutine (RepellBalls());
+        System.Array values = AudioReverbPreset.GetValues(typeof(AudioReverbPreset));
+        AudioReverbPreset randomBar = (AudioReverbPreset)values.GetValue(Random.Range(0,values.Length));
+
+        try { m_audioReverbZone.reverbPreset = (AudioReverbPreset)randomBar;
+        }
+        catch
+        {
+            Debug.LogError(this.gameObject.name);
+        }
+        StartCoroutine (RepellBalls());
 	}
 
 	private IEnumerator RepellBalls(){
@@ -57,6 +66,11 @@ public class NoiseBall : MonoBehaviour {
 
                 //add a force proportional to that distance to the ball
                 float distance = Vector3.Distance(this.transform.position, ball.transform.position) + .1f;
+                if(distance > 20.0f)
+                {
+                    continue;
+                }
+
                 m_rigidbody.AddForce(direction * m_repulsiveForce * m_ballMultiplier * Time.deltaTime/distance);
 			}
 
@@ -71,9 +85,11 @@ public class NoiseBall : MonoBehaviour {
 				m_rigidbody.AddForce(direction * m_repulsiveForce * m_playerModifier * Time.deltaTime / (Vector3.Distance(this.transform.position,hit.transform.position)));
 			}
 
-			m_playerLineRenderer.SetVertexCount (positions.Count);
-			m_playerLineRenderer.SetPositions (positions.ToArray());
-
+            if (m_playerLineRenderer != null)
+            {
+                m_playerLineRenderer.SetVertexCount(positions.Count);
+                m_playerLineRenderer.SetPositions(positions.ToArray());
+            }
 			m_rigidbody.AddForce ((origPosition - this.transform.position) * Vector3.Distance(origPosition,this.transform.position) * m_ballMultiplier * Time.deltaTime);
 
 			yield return new WaitForEndOfFrame ();

@@ -255,6 +255,7 @@
     <None Include="Assets\NewAtlantis\Core\Shaders\ReflectiveTransparent.shader" />
     <None Include="Assets\NewAtlantis\Core\Shaders\TransparentSpecular.shader" />
     <None Include="Assets\NewAtlantis\Core\Text\tutorial.txt" />
+    <None Include="Assets\Particle Lines\Simple Particle Scaler\Simple Particle Scaler - Readme.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
