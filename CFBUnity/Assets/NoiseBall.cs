@@ -36,9 +36,11 @@ public class NoiseBall : MonoBehaviour {
                 float distance = Vector3.Distance(this.transform.position, hit.transform.position) + .1f;
 				m_rigidbody.AddForce(direction.normalized * m_repulsiveForce * Time.deltaTime * -1.0f/distance);
 			}
-			m_lineRenderer.SetVertexCount (positions.Count);
-			m_lineRenderer.SetPositions (positions.ToArray ());
-
+            if (m_lineRenderer != null)
+            {
+                m_lineRenderer.SetVertexCount(positions.Count);
+                m_lineRenderer.SetPositions(positions.ToArray());
+            }
 
 			foreach (GameObject ball in NoisyBalls) {
 				//calculate distance vector
