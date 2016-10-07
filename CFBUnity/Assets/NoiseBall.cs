@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class NoiseBall : MonoBehaviour {
+	public char ScaleGroup = 'x';
+	
 	[SerializeField]private float m_repulsiveForce;
 	[SerializeField]private float m_ballMultiplier = 100.0f;
 	[SerializeField]private LineRenderer m_lineRenderer;
@@ -12,6 +14,7 @@ public class NoiseBall : MonoBehaviour {
 	[SerializeField]private LayerMask m_layerMask;
 	[SerializeField]private float m_playerModifier;
     [SerializeField]private AudioReverbZone m_audioReverbZone;
+	[SerializeField]private float m_scaleMultiplier;
 
 	private const float mc_searchDistance = 15.0f;
 	// Use this for initialization
@@ -61,6 +64,18 @@ public class NoiseBall : MonoBehaviour {
             }
 
 			foreach (GameObject ball in NoisyBalls) {
+				//greater attraction to objects playing the same diminished scale
+				NoiseBall otherBall = ball.GetComponent<NoiseBall>();
+				if (ScaleGroup != 'x' && otherBall.ScaleGroup != 'x') {
+					if (ScaleGroup == otherBall.ScaleGroup)
+						m_scaleMultiplier = .8f;
+					else
+						m_scaleMultiplier = -.8f;
+				} else {
+					// not designated to any scale (unaffected interaction)
+					m_scaleMultiplier = 1f;
+				}
+				
 				//calculate distance vector
 				Vector3 direction = this.transform.position - ball.transform.position;
 
@@ -82,7 +97,7 @@ public class NoiseBall : MonoBehaviour {
                
 
                 Vector3 direction = this.transform.position - hit.transform.position;
-				m_rigidbody.AddForce(direction * m_repulsiveForce * m_playerModifier * Time.deltaTime / (Vector3.Distance(this.transform.position,hit.transform.position)));
+				m_rigidbody.AddForce(direction * m_repulsiveForce * m_playerModifier * Time.deltaTime * m_scaleMultiplier / (Vector3.Distance(this.transform.position,hit.transform.position)));
 			}
 
             if (m_playerLineRenderer != null)
@@ -90,7 +105,7 @@ public class NoiseBall : MonoBehaviour {
                 m_playerLineRenderer.SetVertexCount(positions.Count);
                 m_playerLineRenderer.SetPositions(positions.ToArray());
             }
-			m_rigidbody.AddForce ((origPosition - this.transform.position) * Vector3.Distance(origPosition,this.transform.position) * m_ballMultiplier * Time.deltaTime);
+			m_rigidbody.AddForce ((origPosition - this.transform.position) * Vector3.Distance(origPosition,this.transform.position) * m_ballMultiplier * Time.deltaTime * m_scaleMultiplier);
 
 			yield return new WaitForEndOfFrame ();
 		}

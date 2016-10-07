@@ -96,6 +96,7 @@
      <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Normal-DiffuseFast.shader" />
      <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorLeavesOptimized.shader" />
      <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityStandardCoreForward.cginc" />
+     <None Include="Assets\Particle Lines\Simple Particle Scaler\Simple Particle Scaler - Readme.txt" />
      <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\CGIncludes\UnityDeferredLibrary.cginc" />
      <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Reflect-BumpVertexLit.shader" />
      <None Include="Assets\NewAtlantis\Core\Resources\Shaders\builtin_shaders\DefaultResourcesExtra\Reflect-Glossy.shader" />
