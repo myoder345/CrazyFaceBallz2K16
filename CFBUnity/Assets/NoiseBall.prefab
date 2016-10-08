@@ -298,18 +298,18 @@ AudioReverbZone:
   m_Enabled: 1
   m_MinDistance: 17.484978
   m_MaxDistance: 56.520203
-  m_ReverbPreset: 22
+  m_ReverbPreset: 27
   m_Room: -1000
-  m_RoomHF: -1000
-  m_DecayTime: 2.81
-  m_DecayHFRatio: 0.14
-  m_Reflections: 429
-  m_ReflectionsDelay: 0.014
-  m_Reverb: 1023
-  m_ReverbDelay: 0.021
+  m_RoomHF: -6000
+  m_DecayTime: 0.17
+  m_DecayHFRatio: 0.1
+  m_Reflections: -1204
+  m_ReflectionsDelay: 0.001
+  m_Reverb: 207
+  m_ReverbDelay: 0.002
   m_HFReference: 5000
   m_RoomRolloffFactor: 0
-  m_Diffusion: 80
-  m_Density: 60
+  m_Diffusion: 100
+  m_Density: 100
   m_LFReference: 250
   m_RoomLF: 0

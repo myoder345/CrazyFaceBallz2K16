@@ -44,7 +44,7 @@ public class NoiseBall : MonoBehaviour {
 		Vector3 origPosition = this.transform.position;
 		GameObject [] NoisyBalls = GameObject.FindGameObjectsWithTag ("NoiseBall");
 
-		while (true) {
+		while (!NA.isClient()) {
 			Collider[] hits = Physics.OverlapSphere (this.transform.position, mc_searchDistance,m_playerLayerMask);
 
 			List<Vector3> positions = new List<Vector3>();
