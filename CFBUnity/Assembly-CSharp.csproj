@@ -45,7 +45,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BorderControl.cs" />
      <Compile Include="Assets\NewAtlantis\Camera_Mover_Package\NA_CameraRandomRotateAround.cs" />
      <Compile Include="Assets\NewAtlantis\Camera_Mover_Package\NA_CameraRandomRotateAroundCam.cs" />
      <Compile Include="Assets\NewAtlantis\Camera_Mover_Package\NA_CameraRandomView.cs" />
